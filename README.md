@@ -2,7 +2,22 @@
 
 This project is designed to process and analyze doodles or images containing various shapes. The primary goals of the project are to detect and classify regular geometric shapes, assess their symmetry, and perform image completion using a Generative Adversarial Network (GAN). The project is divided into two approaches, each addressing different aspects of shape detection and analysis.
 
-## Approach 1: Identifying Regular Shapes in Doodles and Curve Completion
+## Approach 1: Advanced Shape Detection and Symmetry Identification
+
+This approach builds on the shape detection and classification process by introducing a more sophisticated method for detecting regular shapes and analyzing their symmetry.
+
+### 1.	Advanced Shape Detection:
+•	Shapes are detected by converting the image to grayscale, applying Gaussian blur, and thresholding the image to create a binary version. Contours are then detected in the binary image.
+•	The detected contours are classified based on the number of vertices into shapes such as triangles, squares, rectangles, pentagons, hexagons, heptagons, stars, circles, ellipses, or polygons.
+	
+ ### 2.	Symmetry Analysis:
+•	Symmetry is analyzed by drawing symmetry lines (vertical and horizontal) through the center of the bounding box around the contour of each shape.
+•	A symmetry score is calculated by comparing the contours of the left and right halves and the top and bottom halves of the shape, with a higher score indicating greater symmetry.
+	
+ ### 3.	Visualization and Integration:
+•	The detected shapes and their symmetry are visualized by drawing contours and symmetry lines on the image. The results are displayed using Matplotlib for easy interpretation.
+
+## Approach 2: Identifying Regular Shapes in Doodles and Curve Completion
 
 This approach focuses on detecting and classifying shapes within doodles or images, analyzing their regularity, and completing missing parts of shapes using a GAN.
 
@@ -20,21 +35,6 @@ This approach focuses on detecting and classifying shapes within doodles or imag
 •	The model is trained with synthetically generated datasets, resized, normalized, and converted to grayscale.
 •	After training, the GAN can be used to predict and complete shapes, and the results are saved as polylines in a CSV file for further analysis.
 
-
-## Approach 2: Advanced Shape Detection and Symmetry Identification
-
-This approach builds on the shape detection and classification process by introducing a more sophisticated method for detecting regular shapes and analyzing their symmetry.
-
-### 1.	Advanced Shape Detection:
-•	Shapes are detected by converting the image to grayscale, applying Gaussian blur, and thresholding the image to create a binary version. Contours are then detected in the binary image.
-•	The detected contours are classified based on the number of vertices into shapes such as triangles, squares, rectangles, pentagons, hexagons, heptagons, stars, circles, ellipses, or polygons.
-	
- ### 2.	Symmetry Analysis:
-•	Symmetry is analyzed by drawing symmetry lines (vertical and horizontal) through the center of the bounding box around the contour of each shape.
-•	A symmetry score is calculated by comparing the contours of the left and right halves and the top and bottom halves of the shape, with a higher score indicating greater symmetry.
-	
- ### 3.	Visualization and Integration:
-•	The detected shapes and their symmetry are visualized by drawing contours and symmetry lines on the image. The results are displayed using Matplotlib for easy interpretation.
 
 # Overall Goal
 
