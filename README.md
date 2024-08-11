@@ -76,5 +76,5 @@ The overall goal of the project is to develop a robust system that can detect an
 •	Matplotlib (matplotlib.pyplot)
 •	Pandas (pd)
 •	TensorFlow (tf)
-•	SciPy (scipy)
+•	SciPy(scipy)
 •	scikit-learn (sklearn)
